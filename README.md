@@ -1,2 +1,3 @@
 # project-euler
-Solving Project Euler problems
+Solving [Project Euler](https://projecteuler.net/) problems
+
