@@ -1,4 +1,4 @@
-module PrimeFactors (primeFactors) where
+module PrimeFactors (primeFactors, isPrime, nthPrime) where
 
 import Data.List
 
@@ -13,3 +13,7 @@ primeFactors n = factors n []
                  Nothing -> fs ++ [n]
                  Just f -> factors (n `div` f) (fs ++ [f])
 
+isPrime :: Integer -> Bool
+isPrime n = length (primeFactors n) == 1
+
+nthPrime n = (filter isPrime [1..]) !! (n - 1)
