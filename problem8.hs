@@ -1,4 +1,5 @@
 import Data.Char
+import NAtATime
 
 thousandDigits = "\
 \73167176531330624919225119674426574742355349194934\
@@ -21,9 +22,6 @@ thousandDigits = "\
 \84580156166097919133875499200524063689912560717606\
 \05886116467109405077541002256983155200055935729725\
 \71636269561882670428252483600823257530420752963450"
-
-nAtATime :: Int -> [a] -> [[a]]
-nAtATime window xs = map (\n -> take window (drop n xs)) [0..(length xs - window)]
 
 productOfDigits :: [Char] -> Int
 productOfDigits s = product (map digitToInt s)
