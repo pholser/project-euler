@@ -1,6 +1,4 @@
-import Data.Char (digitToInt)
-
-sumOfDigits n = sum $ map digitToInt (show n)
+import SumOfDigits
 
 f n = sumOfDigits (2^n) 
 
